@@ -11,14 +11,14 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "env": {
-    "es6": true,
+    "es2020": true,
     "node": true,
     "jest": true
   },
   "rules": {
     "no-console": "warn",
     "semi": ["warn", "always"],
-    "no-unused-vars": ["warn"],
-    "no-loops/no-loops": "warn"
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "no-loops/no-loops": "error"
   }
 }

@@ -8,8 +8,12 @@ export interface DiaryEntry {
   visibility: Visibility;
   comment: string;
 }
+// Types Utilities
+// export type NoSensitiveInfoDiaryEntry = Pick<DiaryEntry, 'id' | 'date' | 'weather' | 'visibility'>
+export type NoSensitiveInfoDiaryEntry = Omit<DiaryEntry, "comment">;
+export type NewDiaryEntry = Omit<DiaryEntry, "id">;
 
-// Example // Not used in this project, just an example.
+// extends Example // Not used in this project, just an example.
 interface SpecialDiaryEntry extends DiaryEntry {
   flightNumber: number;
 }
